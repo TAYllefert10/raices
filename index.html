@@ -716,18 +716,20 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
         }
 
         .service-card {
             background: var(--white);
             border: 1px solid var(--cream-dark);
-            padding: 48px 36px;
+            padding: 40px 28px;
             text-align: center;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .service-card::before {
@@ -760,7 +762,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 28px;
+            margin: 0 auto 24px;
             transition: var(--transition);
         }
 
@@ -779,31 +781,42 @@
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--text-dark);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .service-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--gold);
             margin-bottom: 16px;
-            font-weight: 400;
         }
 
         .service-card p {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: var(--text-medium);
             font-weight: 300;
-            line-height: 1.8;
-            margin-bottom: 24px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex-grow: 1;
         }
 
         .service-features {
             text-align: left;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
         }
 
         .service-features li {
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             color: var(--text-medium);
             font-weight: 300;
-            padding: 6px 0;
-            padding-left: 20px;
+            padding: 5px 0;
+            padding-left: 18px;
             position: relative;
         }
 
@@ -813,7 +826,7 @@
             left: 0;
             color: var(--gold);
             font-size: 0.6rem;
-            top: 9px;
+            top: 8px;
         }
 
         .service-link {
@@ -825,6 +838,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            margin-top: auto;
         }
 
         .service-link i {
@@ -1622,12 +1636,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .services-grid .service-card:last-child {
-                grid-column: span 2;
-                max-width: 50%;
-                margin: 0 auto;
-            }
-
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: auto;
@@ -1653,12 +1661,6 @@
 
             .testimonials-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .testimonials-grid .testimonial-card:last-child {
-                grid-column: span 2;
-                max-width: 50%;
-                margin: 0 auto;
             }
 
             .footer-grid {
@@ -1737,11 +1739,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .services-grid .service-card:last-child {
-                grid-column: span 1;
-                max-width: 100%;
-            }
-
             .gallery {
                 padding: 80px 0;
             }
@@ -1774,11 +1771,6 @@
 
             .testimonials-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid .testimonial-card:last-child {
-                grid-column: span 1;
-                max-width: 100%;
             }
 
             .contact {
@@ -2000,24 +1992,25 @@
         <div class="container">
             <div class="services-header">
                 <p class="services-label reveal">Nuestros Servicios</p>
-                <h2 class="reveal reveal-delay-1">Tres formas de hacer <em>realidad vuestra boda</em></h2>
+                <h2 class="reveal reveal-delay-1">Planes diseñados para <em>vuestro estilo</em></h2>
                 <div class="section-divider reveal reveal-delay-2"></div>
-                <p class="reveal reveal-delay-2">Cada pareja es única, y por eso ofrecemos diferentes niveles de acompañamiento para adaptarnos a vuestras necesidades.</p>
+                <p class="reveal reveal-delay-2">Cada pareja es única, y por eso ofrecemos diferentes niveles de acompañamiento para adaptarnos a vuestras necesidades y momento de planificación.</p>
             </div>
             <div class="services-grid">
                 <!-- Servicio 1 -->
                 <div class="service-card reveal reveal-delay-1">
                     <div class="service-icon">
-                        <i class="fas fa-ring"></i>
+                        <i class="fas fa-compass-drafting"></i>
                     </div>
-                    <h3>Organización Integral</h3>
-                    <p>Desde la primera idea hasta el último baile. Nos encargamos de absolutamente todo para que vosotros solo tengáis que disfrutar.</p>
+                    <h3>Raíces Fundamentales</h3>
+                    <span class="service-tag">Planificación Completa</span>
+                    <p>Máxima personalización. Planificación, diseño conceptual, gestión de presupuesto, selección de proveedores Km 0 y coordinación integral.</p>
                     <ul class="service-features">
+                        <li>Desde el día cero hasta el día después</li>
+                        <li>Diseño conceptual a medida</li>
                         <li>Gestión completa del presupuesto</li>
-                        <li>Selección y coordinación de proveedores</li>
-                        <li>Diseño conceptual de la boda</li>
-                        <li>Timing y planificación detallada</li>
-                        <li>Acompañamiento personalizado</li>
+                        <li>Proveedores locales y artesanos</li>
+                        <li>Coordinación integral del evento</li>
                     </ul>
                     <a href="#contacto" class="service-link">
                         Solicitar información <i class="fas fa-arrow-right"></i>
@@ -2026,16 +2019,17 @@
                 <!-- Servicio 2 -->
                 <div class="service-card reveal reveal-delay-2">
                     <div class="service-icon">
-                        <i class="fas fa-clipboard-check"></i>
+                        <i class="fas fa-layer-group"></i>
                     </div>
-                    <h3>Coordinación del Día B</h3>
-                    <p>Para los que ya lo tienen todo, pero quieren disfrutar sin preocupaciones el día de su boda.</p>
+                    <h3>Raíces Esenciales</h3>
+                    <span class="service-tag">Planificación Parcial</span>
+                    <p>Diseño y Curación. Ideal para parejas con fecha y lugar ya decididos. Diseño conceptual y curación de proveedores clave.</p>
                     <ul class="service-features">
-                        <li>Supervisión técnica del evento</li>
-                        <li>Coordinación logística completa</li>
-                        <li>Gestión de proveedores el día B</li>
-                        <li>Resolución de imprevistos</li>
-                        <li>Timing minuto a minuto</li>
+                        <li>Curación de finca, catering y fotógrafo</li>
+                        <li>Diseño conceptual refinado</li>
+                        <li>Coordinación completa del Día B</li>
+                        <li>Presupuesto optimizado</li>
+                        <li>Atención personalizada</li>
                     </ul>
                     <a href="#contacto" class="service-link">
                         Solicitar información <i class="fas fa-arrow-right"></i>
@@ -2044,16 +2038,36 @@
                 <!-- Servicio 3 -->
                 <div class="service-card reveal reveal-delay-3">
                     <div class="service-icon">
-                        <i class="fas fa-palette"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
-                    <h3>Diseño y Decoración</h3>
-                    <p>Creamos la atmósfera visual y estética que convertirá vuestra boda en un espacio mágico e irrepetible.</p>
+                    <h3>Raíces Día B</h3>
+                    <span class="service-tag">Coordinación Final</span>
+                    <p>Tranquilidad y Logística. Coordinación logística 30 días antes. Perfecto para parejas que han planificado todo pero quieren disfrutar sin estrés.</p>
                     <ul class="service-features">
-                        <li>Moodboard y concepto visual</li>
-                        <li>Diseño floral y de mesa</li>
-                        <li>Selección de mobiliario y textiles</li>
-                        <li>Iluminación y ambientación</li>
-                        <li>Montaje y desmontaje</li>
+                        <li>Asunción logística 30 días antes</li>
+                        <li>Timing minuto a minuto</li>
+                        <li>Gestión de proveedores el día B</li>
+                        <li>Resolución de imprevistos</li>
+                        <li>Disfruta tu boda sin preocupaciones</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">
+                        Solicitar información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="service-card reveal reveal-delay-4">
+                    <div class="service-icon">
+                        <i class="fas fa-champagne-glasses"></i>
+                    </div>
+                    <h3>Experiencias con Raíces</h3>
+                    <span class="service-tag">Servicios Adicionales</span>
+                    <p>Diseño y coordinación de eventos complementarios para completar vuestra historia antes y después del gran día.</p>
+                    <ul class="service-features">
+                        <li>Pedidas de mano</li>
+                        <li>Aniversarios especiales</li>
+                        <li>Micro Bodas íntimas</li>
+                        <li>Escapadas de Pre-boda</li>
+                        <li>Eventos Post-boda</li>
                     </ul>
                     <a href="#contacto" class="service-link">
                         Solicitar información <i class="fas fa-arrow-right"></i>
@@ -2205,8 +2219,10 @@
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div class="contact-detail-text">
-                                <h4>Horario</h4>
-                                <p>Lun – Vie: 9:00 – 19:00</p>
+                                <h4>Horario de Atención</h4>
+                                <p><strong>Lun & Vie:</strong> 10:00 – 14:00</p>
+                                <p><strong>Mar, Jue:</strong> 10:00 – 14:00 / 16:00 – 19:00</p>
+                                <p><strong>Mié:</strong> 10:00 – 14:00 / 16:00 – 19:00 <em>(Atención al cliente)</em></p>
                             </div>
                         </div>
                     </div>
@@ -2264,9 +2280,10 @@
                                 <label for="servicio">Tipo de servicio <span class="required">*</span></label>
                                 <select id="servicio" name="servicio" required>
                                     <option value="" disabled selected>Selecciona un servicio</option>
-                                    <option value="Organización Integral">Organización Integral</option>
-                                    <option value="Coordinación del Día B">Coordinación del Día B</option>
-                                    <option value="Diseño y Decoración">Diseño y Decoración</option>
+                                    <option value="Raíces Fundamentales">Raíces Fundamentales</option>
+                                    <option value="Raíces Esenciales">Raíces Esenciales</option>
+                                    <option value="Raíces Día B">Raíces Día B</option>
+                                    <option value="Experiencias con Raíces">Experiencias con Raíces</option>
                                     <option value="No lo tengo claro">No lo tengo claro</option>
                                 </select>
                             </div>
@@ -2339,9 +2356,10 @@
                 <div class="footer-col">
                     <h4>Servicios</h4>
                     <ul>
-                        <li><a href="#servicios">Organización Integral</a></li>
-                        <li><a href="#servicios">Coordinación Día B</a></li>
-                        <li><a href="#servicios">Diseño y Decoración</a></li>
+                        <li><a href="#servicios">Raíces Fundamentales</a></li>
+                        <li><a href="#servicios">Raíces Esenciales</a></li>
+                        <li><a href="#servicios">Raíces Día B</a></li>
+                        <li><a href="#servicios">Experiencias con Raíces</a></li>
                         <li><a href="#contacto">Primera Cita Gratuita</a></li>
                     </ul>
                 </div>
@@ -2480,7 +2498,6 @@
 
         // ===== NOTIFICATION =====
         function showNotification(message, type) {
-            // Remove existing notification
             const existing = document.querySelector('.notification');
             if (existing) existing.remove();
 
@@ -2572,7 +2589,56 @@
             "name": "Huelva, Andalucía"
         },
         "priceRange": "€€€",
-        "openingHours": "Mo-Fr 09:00-19:00",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Monday",
+                "opens": "10:00",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Tuesday",
+                "opens": "10:00",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Tuesday",
+                "opens": "16:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Wednesday",
+                "opens": "10:00",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Wednesday",
+                "opens": "16:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Thursday",
+                "opens": "10:00",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Thursday",
+                "opens": "16:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Friday",
+                "opens": "10:00",
+                "closes": "14:00"
+            }
+        ],
         "sameAs": [
             "https://instagram.com/raicesweddings",
             "https://facebook.com/raicesweddings",
