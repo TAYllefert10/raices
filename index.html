@@ -1,0 +1,2600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RAÍCES Weddings · Wedding Planner en Huelva. Organización integral de bodas exclusivas en Andalucía. Hacemos realidad la boda que cuenta vuestra historia.">
+    <meta name="keywords" content="Wedding Planner Huelva, Organización de bodas Huelva, Bodas exclusivas Andalucía, Wedding Planner Andalucía, Planificadora de bodas Huelva, Organización eventos Huelva">
+    <meta name="author" content="RAÍCES Weddings">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="RAÍCES Weddings · Wedding Planner en Huelva">
+    <meta property="og:description" content="Creamos la boda que cuenta vuestra historia. Organización integral, coordinación y diseño en Huelva y Andalucía.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.raicesweddings.es">
+    <meta property="og:image" content="https://www.raicesweddings.es/og-image.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RAÍCES Weddings · Wedding Planner en Huelva">
+    <meta name="twitter:description" content="Organización integral de bodas exclusivas en Huelva y Andalucía.">
+
+    <title>RAÍCES Weddings · Wedding Planner en Huelva | Bodas Exclusivas Andalucía</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.raicesweddings.es">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ===================== RESET & BASE ===================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --olive: #6B7B3A;
+            --olive-light: #8A9B5A;
+            --olive-dark: #4A5628;
+            --earth: #C4A882;
+            --earth-light: #D4BE9E;
+            --earth-dark: #8B7355;
+            --cream: #F5F0EB;
+            --cream-dark: #EDE6DD;
+            --white: #FEFDFB;
+            --text-dark: #2C2C2C;
+            --text-medium: #5A5A5A;
+            --text-light: #8A8A8A;
+            --gold: #C9A96E;
+            --gold-light: #D4BC8E;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===================== DECORATIVE ELEMENTS ===================== */
+        .section-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 20px auto;
+        }
+
+        .section-divider.left {
+            margin: 20px 0;
+        }
+
+        .leaf-icon {
+            display: inline-block;
+            color: var(--olive);
+            margin: 0 8px;
+            font-size: 0.7em;
+            vertical-align: middle;
+        }
+
+        /* ===================== HEADER / NAV ===================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 20px 0;
+        }
+
+        .header.scrolled {
+            background: rgba(254, 253, 251, 0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 12px 0;
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1001;
+        }
+
+        .logo img {
+            height: 48px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        .header.scrolled .logo img {
+            height: 40px;
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .header.scrolled .logo-text {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--white);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .header.scrolled .nav-links a {
+            color: var(--text-dark);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            font-size: 0.75rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 10px 24px !important;
+            border: 1px solid var(--white);
+            border-radius: 0;
+            transition: var(--transition);
+        }
+
+        .header.scrolled .nav-cta {
+            border-color: var(--olive);
+            color: var(--olive) !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--olive);
+            border-color: var(--olive);
+            color: var(--white) !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 1.5px;
+            background: var(--white);
+            transition: var(--transition);
+            display: block;
+        }
+
+        .header.scrolled .hamburger span {
+            background: var(--text-dark);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 4px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -4px);
+        }
+
+        /* Mobile Nav */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(254, 253, 251, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-nav.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-nav a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .mobile-nav a:hover {
+            color: var(--olive);
+        }
+
+        /* ===================== HERO ===================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(
+                    135deg,
+                    rgba(44, 44, 44, 0.55) 0%,
+                    rgba(74, 86, 40, 0.45) 50%,
+                    rgba(44, 44, 44, 0.55) 100%
+                ),
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            transform: scale(1.05);
+            animation: heroZoom 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroZoom {
+            0% { transform: scale(1.05); }
+            100% { transform: scale(1.12); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 24px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            color: var(--white);
+            font-weight: 300;
+            line-height: 1.25;
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+            font-weight: 300;
+            max-width: 560px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.2s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--olive);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--olive-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(107, 123, 58, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--text-dark);
+            border-color: var(--white);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease 1.5s forwards;
+            opacity: 0;
+        }
+
+        .hero-scroll .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-scroll .scroll-line::after {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gold-light);
+            animation: scrollDown 2s ease infinite;
+        }
+
+        @keyframes scrollDown {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
+        /* ===================== INTRO / WELCOME ===================== */
+        .intro {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .intro .container {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .intro-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--olive);
+            margin-bottom: 16px;
+        }
+
+        .intro h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            color: var(--text-dark);
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .intro p {
+            font-size: 1.05rem;
+            color: var(--text-medium);
+            font-weight: 300;
+            line-height: 1.9;
+            max-width: 700px;
+            margin: 24px auto 0;
+        }
+
+        .intro-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: var(--olive);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+
+        /* ===================== ABOUT / NOSOTROS ===================== */
+        .about {
+            padding: 120px 0;
+            background: var(--cream);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .about-image-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-image-accent {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--gold);
+            z-index: -1;
+        }
+
+        .about-content {
+            padding: 20px 0;
+        }
+
+        .about-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--olive);
+            margin-bottom: 16px;
+        }
+
+        .about h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--text-dark);
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+
+        .about-text {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            font-weight: 300;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .value-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--olive);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .value-icon i {
+            color: var(--white);
+            font-size: 0.75rem;
+        }
+
+        .value-text h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .value-text p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* ===================== SERVICES ===================== */
+        .services {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .services-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 80px;
+        }
+
+        .services-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--olive);
+            margin-bottom: 16px;
+        }
+
+        .services-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--text-dark);
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .services-header p {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            font-weight: 300;
+            margin-top: 16px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--cream-dark);
+            padding: 48px 36px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--olive);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--olive);
+        }
+
+        .service-icon i {
+            font-size: 1.3rem;
+            color: var(--olive);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon i {
+            color: var(--white);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .service-features {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .service-features li {
+            font-size: 0.82rem;
+            color: var(--text-medium);
+            font-weight: 300;
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.6rem;
+            top: 9px;
+        }
+
+        .service-link {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--olive);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-link i {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        .service-link:hover i {
+            transform: translateX(4px);
+        }
+
+        /* ===================== GALLERY / INSPIRACIÓN ===================== */
+        .gallery {
+            padding: 120px 0;
+            background: var(--cream);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .gallery-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--olive);
+            margin-bottom: 16px;
+        }
+
+        .gallery-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--text-dark);
+            font-weight: 300;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 280px 280px;
+            gap: 16px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(74, 86, 40, 0.3);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        /* ===================== PROCESS / CÓMO TRABAJAMOS ===================== */
+        .process {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .process-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--olive);
+            margin-bottom: 16px;
+        }
+
+        .process-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--text-dark);
+            font-weight: 300;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12.5%;
+            width: 75%;
+            height: 1px;
+            background: var(--cream-dark);
+        }
+
+        .step-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .step-number span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: var(--olive);
+        }
+
+        .step-item:hover .step-number {
+            background: var(--olive);
+        }
+
+        .step-item:hover .step-number span {
+            color: var(--white);
+        }
+
+        .step-item h3 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .step-item p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* ===================== TESTIMONIALS ===================== */
+        .testimonials {
+            padding: 120px 0;
+            background: var(--olive-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '"';
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 15rem;
+            color: rgba(255,255,255,0.04);
+            line-height: 1;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .testimonials-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 16px;
+        }
+
+        .testimonials-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--white);
+            font-weight: 300;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 40px 32px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-4px);
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+
+        .testimonial-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .testimonial-author {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+        }
+
+        .testimonial-detail {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 4px;
+            font-weight: 300;
+        }
+
+        /* ===================== CONTACT FORM ===================== */
+        .contact {
+            padding: 120px 0;
+            background: var(--cream);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding: 20px 0;
+        }
+
+        .contact-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--olive);
+            margin-bottom: 16px;
+        }
+
+        .contact-info h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--text-dark);
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .contact-info > p {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-top: 16px;
+            margin-bottom: 40px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-detail-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-icon i {
+            color: var(--olive);
+            font-size: 0.9rem;
+        }
+
+        .contact-detail-text h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .contact-detail-text p,
+        .contact-detail-text a {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            font-weight: 300;
+        }
+
+        .contact-detail-text a:hover {
+            color: var(--olive);
+        }
+
+        .contact-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--earth-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link i {
+            color: var(--text-medium);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--olive);
+            border-color: var(--olive);
+        }
+
+        .social-link:hover i {
+            color: var(--white);
+        }
+
+        /* Form */
+        .contact-form-wrapper {
+            background: var(--white);
+            padding: 48px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .form-subtitle {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            font-weight: 300;
+            margin-bottom: 32px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-medium);
+            margin-bottom: 8px;
+        }
+
+        .form-group label .required {
+            color: var(--olive);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            color: var(--text-dark);
+            background: var(--cream);
+            border: 1px solid transparent;
+            outline: none;
+            transition: var(--transition);
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-light);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--olive);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(107, 123, 58, 0.1);
+        }
+
+        .form-group select {
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238A8A8A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .form-checkbox input[type="checkbox"] {
+            width: auto;
+            margin-top: 3px;
+            accent-color: var(--olive);
+            cursor: pointer;
+        }
+
+        .form-checkbox label {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-weight: 300;
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .form-checkbox label a {
+            color: var(--olive);
+            text-decoration: underline;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: var(--olive);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--olive-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(107, 123, 58, 0.3);
+        }
+
+        /* ===================== CTA SECTION ===================== */
+        .cta-section {
+            padding: 100px 0;
+            background: 
+                linear-gradient(
+                    135deg,
+                    rgba(74, 86, 40, 0.85),
+                    rgba(44, 44, 44, 0.75)
+                ),
+                url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            color: var(--white);
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.75);
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-section .btn-primary {
+            background: var(--white);
+            color: var(--olive-dark);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: var(--gold-light);
+            color: var(--text-dark);
+        }
+
+        /* ===================== FOOTER ===================== */
+        .footer {
+            background: var(--text-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-brand .logo img {
+            height: 40px;
+            margin-bottom: 16px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .footer-social a i {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--olive);
+            border-color: var(--olive);
+        }
+
+        .footer-social a:hover i {
+            color: var(--white);
+        }
+
+        .footer-col h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.5);
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--gold-light);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 300;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-bottom a:hover {
+            color: var(--gold-light);
+        }
+
+        /* ===================== WHATSAPP BUTTON ===================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 998;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float i {
+            color: var(--white);
+            font-size: 1.7rem;
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 72px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+            100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+        }
+
+        /* ===================== SCROLL TO TOP ===================== */
+        .scroll-top {
+            position: fixed;
+            bottom: 100px;
+            right: 32px;
+            z-index: 997;
+            width: 44px;
+            height: 44px;
+            background: var(--white);
+            border: 1px solid var(--cream-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--olive);
+            border-color: var(--olive);
+        }
+
+        .scroll-top i {
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            transition: var(--transition);
+        }
+
+        .scroll-top:hover i {
+            color: var(--white);
+        }
+
+        /* ===================== ANIMATIONS (Scroll Reveal) ===================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ===================== RESPONSIVE ===================== */
+        @media (max-width: 1024px) {
+            .about-grid {
+                gap: 50px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid .service-card:last-child {
+                grid-column: span 2;
+                max-width: 50%;
+                margin: 0 auto;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 2;
+                height: 350px;
+            }
+
+            .gallery-item:not(:first-child) {
+                height: 220px;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid .testimonial-card:last-child {
+                grid-column: span 2;
+                max-width: 50%;
+                margin: 0 auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-nav {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .intro {
+                padding: 80px 0;
+            }
+
+            .intro-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .about {
+                padding: 80px 0;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image-wrapper img {
+                height: 350px;
+            }
+
+            .about-image-accent {
+                display: none;
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                padding: 80px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid .service-card:last-child {
+                grid-column: span 1;
+                max-width: 100%;
+            }
+
+            .gallery {
+                padding: 80px 0;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 1;
+                height: 280px;
+            }
+
+            .gallery-item:not(:first-child) {
+                height: 200px;
+            }
+
+            .process {
+                padding: 80px 0;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .testimonials {
+                padding: 80px 0;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid .testimonial-card:last-child {
+                grid-column: span 1;
+                max-width: 100%;
+            }
+
+            .contact {
+                padding: 80px 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .contact-form-wrapper {
+                padding: 32px 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+
+            .cta-section {
+                padding: 80px 0;
+            }
+
+            .footer {
+                padding: 60px 0 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 54px;
+                height: 54px;
+            }
+
+            .scroll-top {
+                bottom: 86px;
+                right: 24px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .contact-form-wrapper {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="RAÍCES Weddings · Wedding Planner Huelva">
+                <span class="logo-text">RAÍCES</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto" class="nav-cta">Reservar Cita</a>
+            </nav>
+            <div class="hamburger" id="hamburger" aria-label="Menú" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#home" class="mobile-link">Inicio</a>
+        <a href="#nosotros" class="mobile-link">Nosotros</a>
+        <a href="#servicios" class="mobile-link">Servicios</a>
+        <a href="#galeria" class="mobile-link">Galería</a>
+        <a href="#contacto" class="mobile-link">Contacto</a>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Wedding Planner · Huelva</span>
+            <h1>Creamos la boda que <em>cuenta vuestra historia</em></h1>
+            <p>Vosotros soñad, nosotras enraizamos cada detalle. Organización integral de bodas exclusivas en Huelva y Andalucía.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i>
+                    Reserva tu cita gratuita
+                </a>
+                <a href="#servicios" class="btn btn-outline">
+                    Descubre nuestros servicios
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ==================== INTRO ==================== -->
+    <section class="intro">
+        <div class="container">
+            <p class="intro-label reveal">Bienvenidos a RAÍCES</p>
+            <h2 class="reveal reveal-delay-1">Vuestra boda, nuestra pasión</h2>
+            <div class="section-divider reveal reveal-delay-2"></div>
+            <p class="reveal reveal-delay-2">
+                En <strong>RAÍCES Weddings</strong> sabemos que vuestra boda no es solo un evento; es el reflejo de vuestra historia. Con sede en <strong>Huelva</strong>, nuestro equipo se encarga de que cada proveedor, cada flor y cada minuto encajen a la perfección. Nuestro objetivo es que vuestra única preocupación sea disfrutar del <em>"sí, quiero"</em>.
+            </p>
+            <div class="intro-stats reveal reveal-delay-3">
+                <div class="stat-item">
+                    <div class="stat-number">+50</div>
+                    <div class="stat-label">Bodas realizadas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Parejas felices</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Años de experiencia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NOSOTROS ==================== -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laura y María · Fundadoras de RAÍCES Weddings Huelva">
+                    </div>
+                    <div class="about-image-accent"></div>
+                </div>
+                <div class="about-content">
+                    <p class="about-label reveal">Nosotros</p>
+                    <h2 class="reveal reveal-delay-1">Laura &amp; María<br><em>El alma de RAÍCES</em></h2>
+                    <p class="about-text reveal reveal-delay-2">
+                        Somos <strong>Laura</strong> y <strong>María</strong>, dos apasionadas de los eventos y las historias de amor que merecen ser contadas de forma única. Fundamos RAÍCES con una misión clara: <strong>eliminar el estrés del proceso de organización</strong> para que cada pareja viva su boda con total tranquilidad.
+                    </p>
+                    <p class="about-text reveal reveal-delay-2">
+                        Nuestra estructura combina la dedicación total de una <strong>socia trabajadora</strong> que está en cada detalle del evento, con la solvencia y respaldo de una <strong>socia capitalista</strong> que garantiza los recursos necesarios para hacer realidad cualquier visión. Juntas, formamos un equipo sólido, comprometido y con una sola obsesión: que todo salga perfecto.
+                    </p>
+                    <div class="about-values reveal reveal-delay-3">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>Pasión</h4>
+                                <p>Amamos lo que hacemos y se nota en cada detalle.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>Cercanía</h4>
+                                <p>Tratamos a cada pareja como si fuera familia.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>Solvencia</h4>
+                                <p>Estructura sólida que garantiza resultados.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>Naturalidad</h4>
+                                <p>Bodas con alma, auténticas y con personalidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICIOS ==================== -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="services-header">
+                <p class="services-label reveal">Nuestros Servicios</p>
+                <h2 class="reveal reveal-delay-1">Tres formas de hacer <em>realidad vuestra boda</em></h2>
+                <div class="section-divider reveal reveal-delay-2"></div>
+                <p class="reveal reveal-delay-2">Cada pareja es única, y por eso ofrecemos diferentes niveles de acompañamiento para adaptarnos a vuestras necesidades.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Servicio 1 -->
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Organización Integral</h3>
+                    <p>Desde la primera idea hasta el último baile. Nos encargamos de absolutamente todo para que vosotros solo tengáis que disfrutar.</p>
+                    <ul class="service-features">
+                        <li>Gestión completa del presupuesto</li>
+                        <li>Selección y coordinación de proveedores</li>
+                        <li>Diseño conceptual de la boda</li>
+                        <li>Timing y planificación detallada</li>
+                        <li>Acompañamiento personalizado</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">
+                        Solicitar información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Coordinación del Día B</h3>
+                    <p>Para los que ya lo tienen todo, pero quieren disfrutar sin preocupaciones el día de su boda.</p>
+                    <ul class="service-features">
+                        <li>Supervisión técnica del evento</li>
+                        <li>Coordinación logística completa</li>
+                        <li>Gestión de proveedores el día B</li>
+                        <li>Resolución de imprevistos</li>
+                        <li>Timing minuto a minuto</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">
+                        Solicitar información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Diseño y Decoración</h3>
+                    <p>Creamos la atmósfera visual y estética que convertirá vuestra boda en un espacio mágico e irrepetible.</p>
+                    <ul class="service-features">
+                        <li>Moodboard y concepto visual</li>
+                        <li>Diseño floral y de mesa</li>
+                        <li>Selección de mobiliario y textiles</li>
+                        <li>Iluminación y ambientación</li>
+                        <li>Montaje y desmontaje</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">
+                        Solicitar información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALERÍA ==================== -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="gallery-header">
+                <p class="gallery-label reveal">Inspiración</p>
+                <h2 class="reveal reveal-delay-1">Momentos que <em>enamoran</em></h2>
+                <div class="section-divider reveal reveal-delay-2"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Boda elegante en Huelva - RAÍCES Weddings">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Decoración floral boda - RAÍCES Weddings">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Detalle mesa boda - RAÍCES Weddings">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pareja en su boda - RAÍCES Weddings">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ceremonia al aire libre - RAÍCES Weddings">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESO ==================== -->
+    <section class="process">
+        <div class="container">
+            <div class="process-header">
+                <p class="process-label reveal">Cómo Trabajamos</p>
+                <h2 class="reveal reveal-delay-1">De la primera cita al <em>"sí, quiero"</em></h2>
+                <div class="section-divider reveal reveal-delay-2"></div>
+            </div>
+            <div class="process-steps">
+                <div class="step-item reveal reveal-delay-1">
+                    <div class="step-number"><span>01</span></div>
+                    <h3>Primera Cita</h3>
+                    <p>Nos conocemos, escuchamos vuestra historia y entendemos vuestra visión. Sin compromiso, con toda la ilusión.</p>
+                </div>
+                <div class="step-item reveal reveal-delay-2">
+                    <div class="step-number"><span>02</span></div>
+                    <h3>Diseño y Planificación</h3>
+                    <p>Creamos un plan a medida con presupuesto, proveedores y un timeline detallado para que todo fluya.</p>
+                </div>
+                <div class="step-item reveal reveal-delay-3">
+                    <div class="step-number"><span>03</span></div>
+                    <h3>Coordinación</h3>
+                    <p>Gestionamos cada detalle, cada proveedor y cada imprevisto. Vosotros solo tenéis que estar presentes.</p>
+                </div>
+                <div class="step-item reveal reveal-delay-4">
+                    <div class="step-number"><span>04</span></div>
+                    <h3>El Gran Día</h3>
+                    <p>Todo está preparado. Vosotros disfrutáis, nosotras nos aseguramos de que cada momento sea perfecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIOS ==================== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <p class="testimonials-label reveal">Testimonios</p>
+                <h2 class="reveal reveal-delay-1">Lo que dicen <em>nuestras parejas</em></h2>
+                <div class="section-divider reveal reveal-delay-2" style="background: var(--gold-light);"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                    <p class="testimonial-text">"Laura y María hicieron que nuestra boda fuera exactamente como la soñamos. No tuvimos que preocuparnos de nada. Fue mágico."</p>
+                    <p class="testimonial-author">Ana & Carlos</p>
+                    <p class="testimonial-detail">Boda en Mazagón, Huelva</p>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                    <p class="testimonial-text">"Contratamos la coordinación del día B y fue la mejor decisión. Todo salió perfecto, mejor de lo que imaginábamos. Profesionales y cercanas."</p>
+                    <p class="testimonial-author">Marta & David</p>
+                    <p class="testimonial-detail">Boda en El Rompido, Huelva</p>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                    <p class="testimonial-text">"El diseño y la decoración superaron todas nuestras expectativas. Cada rincón era una postal. RAÍCES tiene un gusto exquisito."</p>
+                    <p class="testimonial-author">Lucía & Pablo</p>
+                    <p class="testimonial-detail">Boda en Huelva capital</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Info -->
+                <div class="contact-info">
+                    <p class="contact-label reveal">Contacto</p>
+                    <h2 class="reveal reveal-delay-1">Empecemos a <em>planificar vuestra boda</em></h2>
+                    <div class="section-divider left reveal reveal-delay-2"></div>
+                    <p class="reveal reveal-delay-2">
+                        La primera cita es <strong>gratuita y sin compromiso</strong>. Queremos conocer vuestra historia, escuchar vuestros sueños y mostraros cómo podemos hacerlos realidad.
+                    </p>
+                    <div class="contact-details reveal reveal-delay-3">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Ubicación</h4>
+                                <p>Huelva, Andalucía, España</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Teléfono</h4>
+                                <a href="tel:+34600000000">+34 600 000 000</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Email</h4>
+                                <a href="mailto:hola@raicesweddings.es">hola@raicesweddings.es</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Horario</h4>
+                                <p>Lun – Vie: 9:00 – 19:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social reveal reveal-delay-4">
+                        <a href="https://instagram.com/raicesweddings" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/34600000000" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com/raicesweddings" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://pinterest.com/raicesweddings" target="_blank" rel="noopener" class="social-link" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="contact-form-wrapper reveal">
+                    <h3 class="form-title">Reserva tu cita gratuita</h3>
+                    <p class="form-subtitle">Rellena el formulario y te contactaremos en menos de 24 horas.</p>
+                    <form id="contactForm" action="#" method="POST" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre y apellidos <span class="required">*</span></label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana García López" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Ej: ana@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 600 000 000">
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha">Fecha prevista <span class="required">*</span></label>
+                                <input type="date" id="fecha" name="fecha" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lugar">Lugar del enlace <span class="required">*</span></label>
+                                <select id="lugar" name="lugar" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="Huelva capital">Huelva capital</option>
+                                    <option value="Costa de Huelva">Costa de Huelva</option>
+                                    <option value="Sierra de Huelva">Sierra de Huelva</option>
+                                    <option value="Provincia de Huelva">Provincia de Huelva</option>
+                                    <option value="Otra provincia">Otra provincia</option>
+                                    <option value="Aún por decidir">Aún por decidir</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="servicio">Tipo de servicio <span class="required">*</span></label>
+                                <select id="servicio" name="servicio" required>
+                                    <option value="" disabled selected>Selecciona un servicio</option>
+                                    <option value="Organización Integral">Organización Integral</option>
+                                    <option value="Coordinación del Día B">Coordinación del Día B</option>
+                                    <option value="Diseño y Decoración">Diseño y Decoración</option>
+                                    <option value="No lo tengo claro">No lo tengo claro</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="presupuesto">Presupuesto estimado <span style="color: var(--text-light); font-weight: 300;">(Opcional)</span></label>
+                                <select id="presupuesto" name="presupuesto">
+                                    <option value="" disabled selected>Selecciona un rango</option>
+                                    <option value="Menos de 15.000€">Menos de 15.000€</option>
+                                    <option value="15.000€ – 25.000€">15.000€ – 25.000€</option>
+                                    <option value="25.000€ – 40.000€">25.000€ – 40.000€</option>
+                                    <option value="40.000€ – 60.000€">40.000€ – 60.000€</option>
+                                    <option value="Más de 60.000€">Más de 60.000€</option>
+                                    <option value="Prefiero no indicarlo">Prefiero no indicarlo</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="mensaje">Contadnos un poco sobre vuestra boda</label>
+                                <textarea id="mensaje" name="mensaje" placeholder="¿Tenéis alguna idea especial? ¿Algo que os haga especial ilusión?"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacidad" name="privacidad" required>
+                            <label for="privacidad">He leído y acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos para gestionar mi solicitud.</label>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Enviar solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="reveal">¿Lista para empezar a <em>soñar</em>?</h2>
+            <p class="reveal reveal-delay-1">Vuestra historia merece ser contada de forma única. Déjanos ser parte de ella.</p>
+            <a href="#contacto" class="btn btn-primary reveal reveal-delay-2">
+                <i class="fas fa-calendar-check"></i>
+                Reservar cita gratuita
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="RAÍCES Weddings">
+                    <p>Wedding Planner en Huelva. Creamos bodas con alma para parejas que quieren vivir su gran día con total tranquilidad.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/raicesweddings" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/34600000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://facebook.com/raicesweddings" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://pinterest.com/raicesweddings" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Organización Integral</a></li>
+                        <li><a href="#servicios">Coordinación Día B</a></li>
+                        <li><a href="#servicios">Diseño y Decoración</a></li>
+                        <li><a href="#contacto">Primera Cita Gratuita</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+34600000000"><i class="fas fa-phone-alt" style="margin-right:8px; font-size:0.7rem;"></i>+34 600 000 000</a></li>
+                        <li><a href="mailto:hola@raicesweddings.es"><i class="fas fa-envelope" style="margin-right:8px; font-size:0.7rem;"></i>hola@raicesweddings.es</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-right:8px; font-size:0.7rem;"></i>Huelva, Andalucía</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RAÍCES Weddings. Todos los derechos reservados.</p>
+                <p>
+                    <a href="#">Aviso Legal</a> &nbsp;·&nbsp;
+                    <a href="#">Política de Privacidad</a> &nbsp;·&nbsp;
+                    <a href="#">Cookies</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== WHATSAPP FLOAT ==================== -->
+    <a href="https://wa.me/34600000000?text=Hola%20RAÍCES%20Weddings%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cita%20gratuita." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¿Hablamos por WhatsApp?</span>
+    </a>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <div class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // ===== HEADER SCROLL =====
+        const header = document.getElementById('header');
+        const scrollTop = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 600) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== HAMBURGER MENU =====
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ===== SCROLL REVEAL =====
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== FORM HANDLING =====
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const fecha = document.getElementById('fecha').value;
+            const lugar = document.getElementById('lugar').value;
+            const servicio = document.getElementById('servicio').value;
+            const privacidad = document.getElementById('privacidad').checked;
+
+            if (!nombre || !email || !fecha || !lugar || !servicio) {
+                showNotification('Por favor, completa todos los campos obligatorios.', 'error');
+                return;
+            }
+
+            if (!privacidad) {
+                showNotification('Debes aceptar la política de privacidad.', 'error');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Por favor, introduce un email válido.', 'error');
+                return;
+            }
+
+            // Simulate form submission
+            const submitBtn = contactForm.querySelector('.form-submit');
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                showNotification('¡Solicitud enviada con éxito! Te contactaremos en menos de 24 horas.', 'success');
+                contactForm.reset();
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Enviar solicitud';
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+
+        // ===== NOTIFICATION =====
+        function showNotification(message, type) {
+            // Remove existing notification
+            const existing = document.querySelector('.notification');
+            if (existing) existing.remove();
+
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+                <span>${message}</span>
+            `;
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 24px;
+                z-index: 10000;
+                padding: 16px 24px;
+                border-radius: 4px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.85rem;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+                transform: translateX(120%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                max-width: 400px;
+                ${type === 'success' 
+                    ? 'background: #f0f7ed; color: #2d5a1e; border-left: 3px solid #4a7a2e;' 
+                    : 'background: #fdf2f2; color: #8b2020; border-left: 3px solid #c0392b;'}
+            `;
+
+            document.body.appendChild(notification);
+
+            requestAnimationFrame(() => {
+                notification.style.transform = 'translateX(0)';
+            });
+
+            setTimeout(() => {
+                notification.style.transform = 'translateX(120%)';
+                setTimeout(() => notification.remove(), 400);
+            }, 5000);
+        }
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== SET MIN DATE TO TODAY =====
+        const fechaInput = document.getElementById('fecha');
+        const today = new Date().toISOString().split('T')[0];
+        fechaInput.setAttribute('min', today);
+    </script>
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EventPlanner",
+        "name": "RAÍCES Weddings",
+        "description": "Wedding Planner en Huelva. Organización integral de bodas exclusivas en Andalucía.",
+        "url": "https://www.raicesweddings.es",
+        "telephone": "+34600000000",
+        "email": "hola@raicesweddings.es",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Huelva",
+            "addressRegion": "Andalucía",
+            "addressCountry": "ES"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "37.2614",
+            "longitude": "-6.9447"
+        },
+        "areaServed": {
+            "@type": "State",
+            "name": "Huelva, Andalucía"
+        },
+        "priceRange": "€€€",
+        "openingHours": "Mo-Fr 09:00-19:00",
+        "sameAs": [
+            "https://instagram.com/raicesweddings",
+            "https://facebook.com/raicesweddings",
+            "https://pinterest.com/raicesweddings"
+        ],
+        "founder": [
+            {
+                "@type": "Person",
+                "name": "Laura"
+            },
+            {
+                "@type": "Person",
+                "name": "María"
+            }
+        ],
+        "knowsAbout": [
+            "Organización de bodas",
+            "Wedding Planner",
+            "Diseño y decoración de eventos",
+            "Coordinación de bodas"
+        ]
+    }
+    </script>
+</body>
+</html>
